@@ -3,7 +3,9 @@ using namespace std;
 
 int main()
 {
-    int a,b;
+    int a,b,q,r;
     cin>>a>>b;
-    cout<<a+b<<endl;
+    q=a/b;
+    r=a%b;
+    cout<<q<<r;
 }
