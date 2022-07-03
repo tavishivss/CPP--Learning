@@ -15,6 +15,7 @@ int main() {
         cout << "Roots are real and different." << endl;
         cout << "x1 = " << x1 << endl;
         cout << "x2 = " << x2 << endl;
+        
     }
     
     else if (d == 0) {
