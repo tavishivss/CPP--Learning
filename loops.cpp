@@ -3,15 +3,27 @@ using namespace std;
 
 int main() {
 
-    int n,sum=0;
-    cout<<"enter number";
-    cin>>n;
-    for(int i=1;i<=n;i++)
-    {
-        
-        sum=sum+i;
-        
-    }
-            cout<<sum;
+  int year;
 
+  cout << "Enter a year: ";
+  cin >> year;
+
+  if (year % 4 == 0) {
+    if (year % 100 == 0) {
+      if (year % 400 == 0) {
+        cout << year << " is a leap year.";
+      }
+      else {
+        cout << year << " is not a leap year.";
+      }
+    }
+    else {
+      cout << year << " is a leap year.";
+    }
+  }
+  else {
+    cout << year << " is not a leap year.";
+  }
+
+  return 0;
 }
