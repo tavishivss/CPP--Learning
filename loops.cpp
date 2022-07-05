@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-  int n1=10,n2=20,i,hcf;
+  int n1=10,n2=20,i,hcf,lcm;
 
   if(n2>n1){
     int temp=n1;
@@ -15,5 +15,7 @@ int main()
     if ((n1%i==0)&&(n2%i==0));
     hcf=i;
   }
-  cout<<hcf;
+ cout<<hcf;
+ lcm=(n1*n2)/hcf;  
+ cout<<lcm;
 }
