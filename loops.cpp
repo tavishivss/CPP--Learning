@@ -3,13 +3,13 @@ using namespace std;
 
 int main()
 {
-  int n,fact=1;
+  int n,prod=1;
   cin>>n;
 
-  for(int i=1;i<=n;i++)
+  for(int i=1;i<=10;i++)
   {
-    fact*=i;
+    prod=n*i;
+    cout<<n<<"*"<<i<<"="<<prod<<endl;
 
   }
-  cout<<fact;
 }
