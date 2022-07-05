@@ -1,29 +1,15 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main() {
+int main()
+{
+  int n,fact=1;
+  cin>>n;
 
-  int year;
+  for(int i=1;i<=n;i++)
+  {
+    fact*=i;
 
-  cout << "Enter a year: ";
-  cin >> year;
-
-  if (year % 4 == 0) {
-    if (year % 100 == 0) {
-      if (year % 400 == 0) {
-        cout << year << " is a leap year.";
-      }
-      else {
-        cout << year << " is not a leap year.";
-      }
-    }
-    else {
-      cout << year << " is a leap year.";
-    }
   }
-  else {
-    cout << year << " is not a leap year.";
-  }
-
-  return 0;
+  cout<<fact;
 }
