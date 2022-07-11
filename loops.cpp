@@ -1,18 +1,45 @@
 #include<iostream>
+
 using namespace std;
 
-int main()
-{
-  int n,rem,rev=0;
-  cin>>n;
-  
-  while(n!=0)
-  {
-    rem=n%10;
-    rev=rev*10+rem;
-    n/=10;
-  }
+ 
 
-  cout<<rev;
+int main() {
+
+// Write your code here
+
+int n;
+
+   cin>>n;
+
+   int oddsum = 0, evensum = 0;
+
+   
+
+   while(n > 0){
+
+       int digit = n % 10;
+
+       if(digit%2){    
+
+          //odd number
+
+           oddsum = oddsum + digit;
+
+       }else{
+
+          //even number
+
+           evensum = evensum + digit;
+
+       }
+
+       n = n / 10;
+
+   }
+
+   cout<<evensum<<" "<<oddsum;
 
 }
+
+ 
