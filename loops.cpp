@@ -8,11 +8,11 @@ int main() {
     {
         rem=num%10;
         if(rem%2==0)
-            e_sum++;
-        else o_sum++;
+            e_sum+=rem;
+        else o_sum+=rem;
         num/=10;
         
-    }cout<<e_sum<<"\t"<<o_sum;
+    }cout<<e_sum<<" "<<o_sum;
 
     return 0;
 }
