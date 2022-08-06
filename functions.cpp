@@ -1,16 +1,26 @@
-#include<iostream>
-using namespace std;
+#include <iostream>
+#include <cstdio>
+#include <algorithm>  
 
-void add(int a, int b)
+using namespace std;
+int max_of_four(int a,int b, int c, int d)
 {
-   int sum=a+b;
-   cout<<sum<<endl;
+    int lm,fm,rm;
+    lm=max(a,b);
+    rm=max(c,d);
+    fm=max(lm,rm);
+    return fm;
 }
 
-int main()
-{
-    int c,d;
-    cout<<"enter 2 numbers: ";
-    cin>>c>>d;
-    add(c,d);
+/*
+Add `int max_of_four(int a, int b, int c, int d)` here.
+*/
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
+    
+    return 0;
 }
