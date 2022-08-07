@@ -2,38 +2,39 @@
 #include<stdio.h>
 using namespace std;
 
-struct rectangle
-{ 
-   int a,b; 
-};
-
-void init(struct rectangle *r,int l,int b)
+class rectangle
 {
-    r->a=l;
-    r->b=b;
+   public: 
+   int a,c; 
+
+
+void init(int l,int b)
+{
+    a=l;
+    c=b;
 }
 
-int area(struct rectangle r)
+int area()
 {
-    return r.a*r.b;
+    return a*c;
    
 }
 
-int peri(struct rectangle r)
+int peri()
 {
-    return 2*(r.a+r.b);
+    return 2*(a+c);
 }
-
+};
 int main()
 {
     int l,b;
-    rectangle r={0,0};
+    rectangle r;
     cin>>l>>b;
-    init(&r,l,b);
-    int a=area(r);
-    int p=peri(r);
+    r.init(l,b);
+    int a=r.area();
+    int p=r.peri();
     cout<<a<<p;
-    return 0;
+    
 
     
 }
