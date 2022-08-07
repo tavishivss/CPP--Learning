@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdio.h>
 using namespace std;
 
 struct rectangle
@@ -6,28 +7,33 @@ struct rectangle
    int a,b; 
 };
 
+void init(struct rectangle *r,int l,int b)
+{
+    r->a=l;
+    r->b=b;
+}
+
 int area(struct rectangle r)
 {
-   int area;
-   area = r.a*r.b;
-   cout<<area<<endl;
+    return r.a*r.b;
    
 }
 
 int peri(struct rectangle r)
 {
-   int peri;
-   peri=2*(r.a+r.b);
-   cout<<peri;
+    return 2*(r.a+r.b);
 }
 
 int main()
 {
-    struct rectangle r;
-    r.a=10;
-    r.b=20;
-    area(r);
-    peri(r);
+    int l,b;
+    rectangle r={0,0};
+    cin>>l>>b;
+    init(&r,l,b);
+    int a=area(r);
+    int p=peri(r);
+    cout<<a<<p;
+    return 0;
 
     
 }
