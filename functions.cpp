@@ -1,26 +1,20 @@
-#include <iostream>
-#include <cstdio>
-#include <algorithm>  
+//monolithic program 
 
+#include<iostream>
 using namespace std;
-int max_of_four(int a,int b, int c, int d)
+
+int area(int l, int b)
 {
-    int lm,fm,rm;
-    lm=max(a,b);
-    rm=max(c,d);
-    fm=max(lm,rm);
-    return fm;
+    return l*b;
 }
-
-/*
-Add `int max_of_four(int a, int b, int c, int d)` here.
-*/
-
-int main() {
-    int a, b, c, d;
-    scanf("%d %d %d %d", &a, &b, &c, &d);
-    int ans = max_of_four(a, b, c, d);
-    printf("%d", ans);
-    
-    return 0;
+int peri(int l, int b)
+{
+    return 2*(l + b);
+}
+int main()
+{
+    int l,b;
+    cin>>l>>b;
+    area(l,b);
+    peri(l,b);
 }
