@@ -1,12 +1,10 @@
 #include<iostream>
 using namespace std;
 
-struct rect{
- int l,b;
-};
 int main()
 {
-  struct rect r;
-  cin>>r.l>>r.b;
-  cout<<r.l*r.b;
+  int arr[5];
+  arr[4]=4;
+  arr[5]=5;
+  cout<<arr[3];
 }
