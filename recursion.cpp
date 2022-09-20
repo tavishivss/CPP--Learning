@@ -1,19 +1,17 @@
 #include<iostream>
 using namespace std;
 
-int fun(int n)
+void f(int n)
 {
-    static int x=0;
-    x++;
     if(n>0)
     {
-        return fun(n-1)+x;
+        cout<<n;
+        f(n-1);
+        f(n-1);
     }
-    return 0;
 }
 int main()
 {
-    int a=5;
-    cout<<fun(a);
-    
+    int x=3;
+    f(x);
 }
