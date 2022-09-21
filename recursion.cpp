@@ -8,6 +8,7 @@ void f(int n)
         cout<<n;
         f(n-1);
         f(n-1);
+        f(n-1);
     }
 }
 int main()
