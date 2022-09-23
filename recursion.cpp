@@ -1,18 +1,25 @@
 #include<iostream>
 using namespace std;
-
-void f(int n)
+void fB(int n);
+void fA(int n)
 {
     if(n>0)
     {
         cout<<n;
-        f(n-1);
-        f(n-1);
-        f(n-1);
+        fB(n-1);
+    }
+}
+
+void fB(int n)
+{
+    if(n>1)
+    {
+        cout<<n;
+        fA(n/2);
     }
 }
 int main()
 {
-    int x=3;
-    f(x);
+    int a=20;
+    fA(20);
 }
