@@ -1,23 +1,21 @@
 #include<iostream>
 using namespace std;
+
 int main()
 {
-  int A[3][4];
-  for(int i=0;i<3;i++)
+  int i,n;
+  cout<<"Size:";
+  cin>>n;
+  int *A;
+  A=new int[n];
+  cout<<"enter elements: ";
+  for(int i=0; i<n;i++)
   {
-    for(int j=0;j<4;j++)
-    {
-      cin>>A[i][j];
-    }
+    cin>>A[i];
   }
-
-  for(int i=0;i<3;i++)
+  cout<<"elements are:";
+  for(int i=0; i<n; i++)
   {
-    for(int j=0;j<4;j++)
-    {
-      cout<<A[i][j];
-    }
+    cout<<A[i]<<endl;
   }
-
-  cout<<" "<<A[0][2];
 }
