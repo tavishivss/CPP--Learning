@@ -13,5 +13,4 @@ int main()
    int b=20;
    swap(a,b);
    cout<<a<<" "<<b<<endl;
-
 }
