@@ -16,12 +16,16 @@ int main()
   {
     cout<<A[i];
   }
-  int x;
-  cout<<"element to append:";
-  cin>>x;
-  A[n]=x;
-  n++;
-  cout<<"elements are: ";
+ int index,x;
+ cout<<"index and number";
+ cin>>index>>x;
+ for(i=n;i>index;i--)
+ {
+   A[i]=A[i-1];
+ }
+ A[index]=x;
+ n++;
+   cout<<"elements are: ";
     for(i=0;i<n;i++)
   {
     cout<<A[i];
