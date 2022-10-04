@@ -1,33 +1,24 @@
 #include<iostream>
 using namespace std;
 
+int display(int n,int a[])
+{
+   for(int i=0;i<n;i++)
+   {
+    cout<<a[i];
+   }
+   return 0;
+}
+
 int main()
 {
-  int n,i;
-  cout<<"size";
+  int n;
   cin>>n;
-  int *A = new int[n];
-    for(i=0;i<n;i++)
+  int A[n];
+  for(int i=0; i<n; i++)
   {
     cin>>A[i];
   }
-  cout<<"elements are: ";
-    for(i=0;i<n;i++)
-  {
-    cout<<A[i];
-  }
- int index,x;
- cout<<"index and number";
- cin>>index>>x;
- for(i=n;i>index;i--)
- {
-   A[i]=A[i-1];
- }
- A[index]=x;
- n++;
-   cout<<"elements are: ";
-    for(i=0;i<n;i++)
-  {
-    cout<<A[i];
-  }
+  display(n,A);
+  return 0;
 }
