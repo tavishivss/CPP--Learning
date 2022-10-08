@@ -1,24 +1,35 @@
 #include<iostream>
 using namespace std;
 
-void display(int n,int a[])
+struct array
 {
-    for(int i=0;i<n;i++)
+ int len;
+ int a[10]={1,2,3,4};
+ int size;
+}arr;
+
+void display(struct array arr)
+{
+  int i;
+  cout<<"elements:";
+  for(i=0;i<arr.len;i++)
   {
-    cout<<a[i];
+    cout<<arr.a[i];
   }
+}
+
+void append(struct array *arr,int x)
+{
+    if(arr->len<arr->size)
+    arr->a[arr->len++]=x;
+  
 }
 
 int main()
 {
-  int n;
-  int a[n];
-  cout<<"no. of elements: ";
-  cin>>n;
-  cout<<"elements are: ";
-  for(int i=0;i<n;i++)
-  {
-    cin>>a[i];
-  }
-  display(n,a);
+  arr.len=4;
+  arr.size=10;
+  append(&arr,10);
+  display(arr);
+  
 }
