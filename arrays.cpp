@@ -18,10 +18,14 @@ void display(struct array arr)
   }
 }
 
-void append(struct array *arr,int x)
+void insert(struct array *arr,int index,int x)
 {
-    if(arr->len<arr->size)
-    arr->a[arr->len++]=x;
+  for(int i=arr->len;i>index;i--)
+  {
+    arr->a[i]=arr->a[i-1];
+  }
+  arr->a[index]=x;
+  arr->len++;
   
 }
 
@@ -29,7 +33,7 @@ int main()
 {
   arr.len=4;
   arr.size=10;
-  append(&arr,10);
+  insert(&arr,3,2);
   display(arr);
-  
+ 
 }
