@@ -16,7 +16,8 @@ int binarSearch(int a[],int l,int h,int key)
      {
       l=m+1;
      }
-     else h=m-1;
+     else       h=m-1;
+
   } 
   return -1;
 }
