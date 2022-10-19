@@ -1,40 +1,37 @@
 #include<iostream>
 using namespace std;
 
-int binarySearch(int a[],int n,int key)
+
+int binarSearch(int a[],int l,int h,int key)
 {
-  int s=0;
-  int e=n;
-  while(s<=e)
+  while(l<=h)
   {
-    int mid=(s+e)/2;
-    if(a[mid]==key)
-    {
-      return mid;
-    }
-    else if(a[mid]>key)
-    {
-      e=mid-1;
-    }
-    else
-    {
-      s=mid+1;
-    }
-  }return -1;
+    int m;
+     m=(l+h)/2;
+     if(a[m]==key)
+     {
+       return m;
+     }
+     if(a[m]<key)
+     {
+      l=m+1;
+     }
+     else h=m-1;
+  } 
+  return -1;
 }
+
 
 int main()
 {
-  int n;
-  cin>>n; 
-  int a[n];
-  for(int i=0;i<n;i++)
-  {
-    cin>>a[i];
-  }
-
-  int key;
+  int a[]={10,20,30,40,50};
+  int i,m,l,h,val,key;
   cin>>key;
-  cout<<binarySearch(a,n,key)<<endl;
-  return 0;
+  int result = binarSearch(a,0,4,key);
+  if(result==-1)
+  {
+    cout<<"element not found";
+  }
+  else cout<<"element found "<< result;
 }
+
