@@ -1,30 +1,21 @@
 #include<iostream>
 using namespace std;
-
-int linearSearch(int a[],int n,int key) 
-{
-    for(int i=0;i<n;i++)
-    {
-        if(a[i]==key)
-        {
-            return i;
-        }
-    }
-    return -1;
-}
-
 int main()
 {
-    int n;
-    cin>>n;
-    int a[n];
-    for(int i=0;i<n;i++)
+    int a[]={10,20,30,40};
+    int i,val,flag=0;
+    cin>>val;
+    for(i=0;i<4;i++)
     {
-        cin>>a[i];
+        if(a[i]==val){
+            flag=1;
+            break;
+        }
     }
 
-    int key;
-    cin>>key;
-    cout<<linearSearch(a,n,key)<<endl;
-    return 0;
+    if(flag==1)
+    {
+        cout<<"found "<<i;
+    }
+    else cout<<"not found";
 }
