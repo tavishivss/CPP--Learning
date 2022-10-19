@@ -2,20 +2,16 @@
 using namespace std;
 int main()
 {
-    int a[]={10,20,30,40};
-    int i,val,flag=0;
+    int a[]={'a','v','e','d'};
+    int i,count=0;
+    char val;
     cin>>val;
     for(i=0;i<4;i++)
     {
         if(a[i]==val){
-            flag=1;
-            break;
+            cout<<"value is found "<<i;
+            count++;
         }
     }
 
-    if(flag==1)
-    {
-        cout<<"found "<<i;
-    }
-    else cout<<"not found";
 }
