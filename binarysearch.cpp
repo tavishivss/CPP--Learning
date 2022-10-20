@@ -12,11 +12,11 @@ int binarSearch(int a[],int l,int h,int key)
      {
        return m;
      }
-     if(a[m]<key)
+     if(key<a[m])
      {
-      l=m+1;
+      h=m-1;
      }
-     else       h=m-1;
+     else       l=m+1;
 
   } 
   return -1;
