@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-
 void display(int a[],int n)
 {
     for(int i=0;i<n;i++)
@@ -9,7 +8,6 @@ void display(int a[],int n)
     }
     cout<<endl;
 }
-
 int main()
 {
   int a[]={30,20,70,80,10};
@@ -28,6 +26,4 @@ int main()
     a[j+1]=key;
   }
   display(a,n);
-
-
 }
